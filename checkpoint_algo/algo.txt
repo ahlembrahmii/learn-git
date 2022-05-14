@@ -1,0 +1,25 @@
+ALGORITHME Chaine
+
+var x , y , z integer ;
+x:=0;
+y:=0;
+z:=0;
+
+BEGIN
+while (ch[x]!=".") do
+{
+
+if (ch[x]==" ") then
+y:=y+1;
+endif
+
+if (UpperCase(ch[x])=="A")or(UpperCase(ch[x])=="I")or(UpperCase(ch[x])=="O")or(UpperCase(ch[x])=="E")or(UpperCase(ch[x])=="U")or(UpperCase(ch[x])=="Y")then
+z:=z+1;
+endif
+
+x:=x+1;
+}
+whrite("le nombre de caracteres dans cette chaine est : " ,x+1);
+whrite("le nombre de mots dans cette chaine est : " ,y+1);
+whrite("le nombre de voyelles dans cette chaine est : " ,z);
+END
