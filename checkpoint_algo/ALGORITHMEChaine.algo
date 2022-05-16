@@ -1,28 +1,29 @@
 ALGORITHME Chaine
 
-var x , y , z integer ;
+var
+ x , y , z:INTEGER;
+ ch:CHAR;
+
+BEGIN
 x:=0;
 y:=0;
 z:=0;
+REPEAT
+read (ch);
 
-
-
-BEGIN
-while (ch[x]!='.') do
+if((ch='.')or(ch=" "))then
 {
-
-if (ch[x]==" ") then
+CONTINUE
+}
+     x:=x+1;
+if (ch=" ") then
 y:=y+1;
 endif
-
-if (UpperCase(ch[x])=='A')or(UpperCase(ch[x])=='I')or(UpperCase(ch[x])=='O')or(UpperCase(ch[x])=='E')or(UpperCase(ch[x])=='U')or(UpperCase(ch[x])=='Y')then
+if ((ch='A')or((ch='I')or((ch='O')or((ch='E')or(U(ch='U')or((ch='Y')then
 z:=z+1;
 endif
-
-x:=x+1;
-}
+UNTIL (ch='.'))
 whrite("le nombre de caracteres dans cette chaine est : " ,x+1);
 whrite("le nombre de mots dans cette chaine est : " ,y+1);
 whrite("le nombre de voyelles dans cette chaine est : " ,z);
 END
-
